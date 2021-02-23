@@ -3,29 +3,29 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="282.0" y="1024.0">pizzashop.gui.OrdersGUI</node>
-    <node x="826.0" y="0.0">pizzashop.model.MenuDataModel</node>
-    <node x="755.0" y="1024.0">pizzashop.model.PaymentType</node>
-    <node x="586.5" y="0.0">pizzashop.service.PaymentOperation</node>
-    <node x="0.0" y="708.0">pizzashop.controller.KitchenGUIController</node>
-    <node x="517.0" y="708.0">pizzashop.service.PizzaService</node>
+    <node x="834.0" y="968.0">pizzashop.gui.OrdersGUI</node>
+    <node x="916.0" y="0.0">pizzashop.model.MenuDataModel</node>
+    <node x="584.0" y="968.0">pizzashop.model.PaymentType</node>
+    <node x="631.0" y="0.0">pizzashop.service.PaymentOperation</node>
+    <node x="0.0" y="661.0">pizzashop.controller.KitchenGUIController</node>
+    <node x="333.0" y="661.0">pizzashop.service.PizzaService</node>
+    <node x="697.0" y="661.0">pizzashop.repository.PaymentRepository</node>
     <node x="0.0" y="0.0">pizzashop.controller.OrdersGUIController</node>
-    <node x="276.0" y="708.0">pizzashop.repository.PaymentRepository</node>
-    <node x="548.0" y="160.25757575757575">pizzashop.service.PaymentAlert</node>
-    <node x="916.0" y="1024.0">pizzashop.gui.KitchenGUI</node>
-    <node x="0.0" y="1024.0">pizzashop.model.Payment</node>
-    <node x="331.0" y="0.0">pizzashop.controller.MainGUIController</node>
-    <node x="878.0" y="708.0">pizzashop.repository.MenuRepository</node>
-    <node x="569.0" y="1024.0">pizzashop.Main</node>
+    <node x="631.0" y="157.0">pizzashop.service.PaymentAlert</node>
+    <node x="194.0" y="1189.0">pizzashop.gui.KitchenGUI</node>
+    <node x="297.0" y="968.0">pizzashop.model.Payment</node>
+    <node x="334.0" y="0.0">pizzashop.controller.MainGUIController</node>
+    <node x="0.0" y="968.0">pizzashop.repository.MenuRepository</node>
+    <node x="0.0" y="1189.0">pizzashop.Main</node>
   </nodes>
   <notes />
   <edges>
     <edge source="pizzashop.service.PaymentAlert" target="pizzashop.service.PaymentOperation">
-      <point x="0.0" y="-101.5" />
-      <point x="0.0" y="48.5" />
+      <point x="0.0" y="-87.5" />
+      <point x="0.0" y="53.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.37714285714285717" x="563.0" y="593.0" />
+  <settings layout="Hierarchic Group" zoom="0.6771428571428572" x="653.9653465346536" y="595.7565256525651" />
   <SelectedNodes>
     <node>pizzashop.service.PaymentAlert</node>
   </SelectedNodes>
