@@ -9,7 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import pizzashop.model.MenuDataModel;
-import pizzashop.gui.OrdersGUI;
+import pizzashop.model.Order;
 import pizzashop.service.PaymentAlert;
 import pizzashop.service.PizzaService;
 
@@ -43,9 +43,9 @@ public class OrdersGUIController {
     @FXML
     private Button payOrder;
     @FXML
-    private Button newOrder;
+    private Button exitTable;
 
-    private   List<String> orderList = FXCollections.observableArrayList();
+    private List<Order> orderList = FXCollections.observableArrayList();
     private List<Double> orderPaymentList = FXCollections.observableArrayList();
     public static double getTotalAmount() {
         return totalAmount;
@@ -57,7 +57,7 @@ public class OrdersGUIController {
     private PizzaService service;
     private int tableNumber;
 
-    public ObservableList<String> observableList;
+    public ObservableList<Order> observableList;
     private TableView<MenuDataModel> table = new TableView<MenuDataModel>();
     private ObservableList<MenuDataModel> menuData;// = FXCollections.observableArrayList();
     private Calendar now = Calendar.getInstance();
@@ -79,12 +79,13 @@ public class OrdersGUIController {
 
         //Controller for Place Order Button
         placeOrder.setOnAction(event ->{
-            orderList= menuData.stream()
+            Order order = new Order(tableNumber);
+            menuData.stream()
                     .filter(x -> x.getQuantity()>0)
-                    .map(menuDataModel -> menuDataModel.getQuantity() +" "+ menuDataModel.getMenuItem())
-                    .collect(Collectors.toList());
+                    .forEach(menuDataModel -> order.addItemToOrder(menuDataModel.getQuantity(), menuDataModel.getMenuItem()));
+            orderList.add(order);
             observableList = FXCollections.observableList(orderList);
-            KitchenGUIController.order.add("Table" + tableNumber +" "+ orderList.toString());
+            KitchenGUIController.order.add(order);
             orderStatus.setText("Order placed at: " +  now.get(Calendar.HOUR)+":"+now.get(Calendar.MINUTE));
         });
 
@@ -145,11 +146,11 @@ public class OrdersGUIController {
         });
 
         //Controller for Exit table Button
-        newOrder.setOnAction(event -> {
+        exitTable.setOnAction(event -> {
             Alert exitAlert = new Alert(Alert.AlertType.CONFIRMATION, "Exit table?",ButtonType.YES, ButtonType.NO);
             Optional<ButtonType> result = exitAlert.showAndWait();
             if (result.get() == ButtonType.YES){
-                Stage stage = (Stage) newOrder.getScene().getWindow();
+                Stage stage = (Stage) exitTable.getScene().getWindow();
                 stage.close();
                 }
         });

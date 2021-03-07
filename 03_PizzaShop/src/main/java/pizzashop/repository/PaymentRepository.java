@@ -1,7 +1,5 @@
 package pizzashop.repository;
 
-import javafx.collections.ObservableList;
-import pizzashop.model.MenuDataModel;
 import pizzashop.model.Payment;
 import pizzashop.model.PaymentType;
 
@@ -21,18 +19,12 @@ public class PaymentRepository {
 
     private void readPayments(){
         ClassLoader classLoader = PaymentRepository.class.getClassLoader();
-        File file = new File(classLoader.getResource(filename).getFile());
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader(new FileReader(file));
-            String line = null;
+        try(BufferedReader br = new BufferedReader(new FileReader(classLoader.getResource(filename).getFile()))) {
+            String line;
             while((line=br.readLine())!=null){
                 Payment payment=getPayment(line);
                 paymentList.add(payment);
             }
-            br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -61,16 +53,12 @@ public class PaymentRepository {
     public void writeAll(){
         ClassLoader classLoader = PaymentRepository.class.getClassLoader();
         File file = new File(classLoader.getResource(filename).getFile());
-
-        BufferedWriter bw = null;
-        try {
-            bw = new BufferedWriter(new FileWriter(file));
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))){
             for (Payment p:paymentList) {
                 System.out.println(p.toString());
                 bw.write(p.toString());
                 bw.newLine();
             }
-            bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
