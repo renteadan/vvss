@@ -1,6 +1,7 @@
 package pizzashop.gui;
 
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
@@ -8,17 +9,26 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.WindowEvent;
+import pizzashop.controller.KitchenGUIController;
+
 import java.io.IOException;
 import java.util.Optional;
 
 
 public class KitchenGUI {
+    VBox vBoxKitchen = null;
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/kitchenGUIFXML.fxml"));
+
+    private KitchenGUIController controller;
+
+    public KitchenGUIController getController() {
+        return controller;
+    }
 
     public void KitchenGUI() {
-        VBox vBoxKitchen = null;
-
         try {
-            vBoxKitchen = FXMLLoader.load(getClass().getResource("/fxml/kitchenGUIFXML.fxml"));
+            vBoxKitchen = loader.load();
+            controller = loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
         }

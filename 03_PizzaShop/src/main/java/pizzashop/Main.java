@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import pizzashop.controller.MainGUIController;
 import pizzashop.gui.KitchenGUI;
+import pizzashop.gui.OrdersGUI;
 import pizzashop.model.PaymentType;
 import pizzashop.repository.MenuRepository;
 import pizzashop.repository.PaymentRepository;
@@ -35,12 +36,18 @@ public class Main extends Application {
         primaryStage.setTitle("PizeriaX");
         primaryStage.setResizable(false);
         primaryStage.setAlwaysOnTop(false);
+        primaryStage.setScene(new Scene(box));
+        primaryStage.show();
+        KitchenGUI kitchenGUI = new KitchenGUI();
+        kitchenGUI.KitchenGUI();
+        kitchenGUI.getController().addObservables(ctrl.getObserablesList());
+        ctrl.setKitchenGUI(kitchenGUI);
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
                 Alert exitAlert = new Alert(Alert.AlertType.CONFIRMATION, "Would you like to exit the Main window?", ButtonType.YES, ButtonType.NO);
                 Optional<ButtonType> result = exitAlert.showAndWait();
-                if (result.get() == ButtonType.YES){
+                if (result.get() == ButtonType.YES && kitchenGUI.getController().isOpened() == false){
                     //Stage stage = (Stage) this.getScene().getWindow();
                     System.out.println("Incasari cash: "+service.getTotalAmount(PaymentType.Cash));
                     System.out.println("Incasari card: "+service.getTotalAmount(PaymentType.Card));
@@ -58,10 +65,7 @@ public class Main extends Application {
 
             }
         });
-        primaryStage.setScene(new Scene(box));
-        primaryStage.show();
-        KitchenGUI kitchenGUI = new KitchenGUI();
-        kitchenGUI.KitchenGUI();
+        //System.out.println(ctrl.getObserablesList());
     }
 
     public static void main(String[] args) { launch(args);

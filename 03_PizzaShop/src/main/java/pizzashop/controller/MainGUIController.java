@@ -1,12 +1,14 @@
 package pizzashop.controller;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import  javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -16,8 +18,17 @@ import javafx.scene.text.Text;
 import javafx.stage.PopupWindow;
 import javafx.stage.Stage;
 import javafx.scene.text.FontWeight;
+import javafx.stage.WindowEvent;
+import pizzashop.Observers.Observable;
+import pizzashop.gui.KitchenGUI;
 import pizzashop.gui.OrdersGUI;
+import pizzashop.model.PaymentType;
 import pizzashop.service.PizzaService;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 import static javafx.scene.paint.Color.DARKBLUE;
 
@@ -41,8 +52,10 @@ public class MainGUIController  {
     private Button table8;
     @FXML
     private MenuItem help;
+    @FXML
+    private Button exit;
 
-    OrdersGUI table1Orders = new OrdersGUI();
+    OrdersGUI  table1Orders = new OrdersGUI();
     OrdersGUI  table2Orders = new OrdersGUI();
     OrdersGUI  table3Orders = new OrdersGUI();
     OrdersGUI  table4Orders = new OrdersGUI();
@@ -50,6 +63,18 @@ public class MainGUIController  {
     OrdersGUI  table6Orders = new OrdersGUI();
     OrdersGUI  table7Orders = new OrdersGUI();
     OrdersGUI  table8Orders = new OrdersGUI();
+
+    public List<OrdersGUI> getObserablesList() {
+        return Arrays.asList(table1Orders,
+                            table2Orders,
+                            table3Orders,
+                            table4Orders,
+                            table5Orders,
+                            table6Orders,
+                            table7Orders,
+                            table8Orders
+                );
+    }
 
     PizzaService service;
 
@@ -95,9 +120,24 @@ public class MainGUIController  {
         });
 
     }
+    private KitchenGUI kitchenGUI;
 
+    public void setKitchenGUI(KitchenGUI kitchenGUI) {
+        this.kitchenGUI = kitchenGUI;
+    }
 
     public void initialize(){
+        exit.setOnAction(event -> {
+                Alert exitAlert = new Alert(Alert.AlertType.CONFIRMATION, "Exit table?",ButtonType.YES, ButtonType.NO);
+                Optional<ButtonType> result = exitAlert.showAndWait();
+                if (result.get() == ButtonType.YES && kitchenGUI.getController().isOpened() == false){
+                    Stage stage = (Stage) exit.getScene().getWindow();
+                    System.out.println("Incasari cash: "+service.getTotalAmount(PaymentType.Cash));
+                    System.out.println("Incasari card: "+service.getTotalAmount(PaymentType.Card));
+
+                    stage.close();
+                }
+        });
 
         help.setOnAction((ActionEvent event) -> {
             Stage stage = new Stage();

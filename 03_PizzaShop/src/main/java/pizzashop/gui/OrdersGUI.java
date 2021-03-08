@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import pizzashop.Observers.Observable;
 import pizzashop.controller.OrdersGUIController;
 import pizzashop.service.PizzaService;
 
@@ -18,24 +19,32 @@ public class OrdersGUI {
     public int getTableNumber() {
         return tableNumber;
     }
-    public void setTableNumber(int tableNumber) { this.tableNumber = tableNumber; }
+    public void setTableNumber(int tableNumber) { this.tableNumber = tableNumber;}
     private PizzaService service;
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/OrdersGUIFXML.fxml"));
+    OrdersGUIController ordersCtrl;
+    VBox vBoxOrders = null;
+    private boolean first = true;
+    Stage stage = new Stage();
 
-    public void displayOrdersForm(PizzaService service){
-     VBox vBoxOrders = null;
+    public OrdersGUIController getController() {
+        return ordersCtrl;
+    }
+
+    public OrdersGUI() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/OrdersGUIFXML.fxml"));
-
-            //vBoxOrders = FXMLLoader.load(getClass().getResource("/fxml/OrdersGUIFXML.fxml"));
             vBoxOrders = loader.load();
-            OrdersGUIController ordersCtrl= loader.getController();
-            ordersCtrl.setService(service, tableNumber);
+            ordersCtrl= loader.getController();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+        stage.setScene(new Scene(vBoxOrders));
 
-     Stage stage = new Stage();
+    }
+
+    public void displayOrdersForm(PizzaService service){
+        ordersCtrl.setService(service, tableNumber);
      stage.setTitle("Table"+getTableNumber()+" order form");
      stage.setResizable(false);
      // disable X on the window
@@ -46,7 +55,6 @@ public class OrdersGUI {
          event.consume();
             }
         });
-     stage.setScene(new Scene(vBoxOrders));
      stage.show();
     }
 }

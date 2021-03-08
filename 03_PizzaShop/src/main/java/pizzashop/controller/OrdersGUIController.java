@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import pizzashop.Observers.Observable;
 import pizzashop.model.MenuDataModel;
 import pizzashop.model.Order;
 import pizzashop.service.PaymentAlert;
@@ -63,13 +64,20 @@ public class OrdersGUIController {
     private Calendar now = Calendar.getInstance();
     private static double totalAmount;
 
+
     public OrdersGUIController(){ }
+
+    private boolean isOpen = false;
+
+    public boolean isOpen() {
+        return isOpen;
+    }
 
     public void setService(PizzaService service, int tableNumber){
         this.service=service;
         this.tableNumber=tableNumber;
         initData();
-
+        isOpen = true;
     }
 
     private void initData(){
@@ -151,6 +159,7 @@ public class OrdersGUIController {
             Optional<ButtonType> result = exitAlert.showAndWait();
             if (result.get() == ButtonType.YES){
                 Stage stage = (Stage) exitTable.getScene().getWindow();
+                isOpen = false;
                 stage.close();
                 }
         });
