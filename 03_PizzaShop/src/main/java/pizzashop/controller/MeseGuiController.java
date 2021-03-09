@@ -33,7 +33,7 @@ import java.util.Optional;
 import static javafx.scene.paint.Color.DARKBLUE;
 
 
-public class MainGUIController  {
+public class MeseGuiController {
     @FXML
     private Button table1;
     @FXML
@@ -78,7 +78,7 @@ public class MainGUIController  {
 
     PizzaService service;
 
-    public MainGUIController(){}
+    public MeseGuiController(){}
 
     public void setService(PizzaService service){
         this.service=service;

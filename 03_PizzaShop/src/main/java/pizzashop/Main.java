@@ -9,7 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import pizzashop.controller.MainGUIController;
+import pizzashop.controller.MeseGuiController;
 import pizzashop.gui.KitchenGUI;
 import pizzashop.model.PaymentType;
 import pizzashop.repository.MenuRepository;
@@ -30,7 +30,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/mainFXML.fxml"));
         //VBox box = loader.load();
         Parent box = loader.load();
-        MainGUIController ctrl = loader.getController();
+        MeseGuiController ctrl = loader.getController();
         ctrl.setService(service);
         primaryStage.setTitle("PizeriaX");
         primaryStage.setResizable(false);
