@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import pizzashop.Observers.Observable;
 import pizzashop.model.MenuDataModel;
 import pizzashop.model.Order;
 import pizzashop.service.PaymentAlert;
