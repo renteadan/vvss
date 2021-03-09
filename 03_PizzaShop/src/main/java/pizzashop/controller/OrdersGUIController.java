@@ -51,8 +51,8 @@ public class OrdersGUIController {
     public static double getTotalAmount() {
         return totalAmount;
     }
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
+    public static void setTotalAmount(double totalAmount) {
+        OrdersGUIController.totalAmount = totalAmount;
     }
 
     private PizzaService service;
@@ -60,7 +60,7 @@ public class OrdersGUIController {
 
     public ObservableList<Order> observableList;
     private TableView<MenuDataModel> table = new TableView<MenuDataModel>();
-    private ObservableList<MenuDataModel> menuData;// = FXCollections.observableArrayList();
+    private ObservableList<MenuDataModel> menuData;
     private Calendar now = Calendar.getInstance();
     private static double totalAmount;
 
@@ -107,7 +107,7 @@ public class OrdersGUIController {
                     .filter(x -> x.getQuantity()>0)
                     .map(menuDataModel -> menuDataModel.getQuantity()*menuDataModel.getPrice())
                     .collect(Collectors.toList());
-            setTotalAmount(orderPaymentList.stream().mapToDouble(e->e.doubleValue()).sum());
+            OrdersGUIController.setTotalAmount(orderPaymentList.stream().mapToDouble(e->e.doubleValue()).sum());
             orderStatus.setText("Total amount: " + getTotalAmount());
             System.out.println("--------------------------");
             System.out.println("Table: " + tableNumber);

@@ -25,7 +25,7 @@ public class KitchenGUI {
         return controller;
     }
 
-    public void KitchenGUI() {
+    public void initKitchenGUI() {
         try {
             vBoxKitchen = loader.load();
             controller = loader.getController();

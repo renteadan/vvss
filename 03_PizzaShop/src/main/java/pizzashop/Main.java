@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import pizzashop.controller.MainGUIController;
 import pizzashop.gui.KitchenGUI;
-import pizzashop.gui.OrdersGUI;
 import pizzashop.model.PaymentType;
 import pizzashop.repository.MenuRepository;
 import pizzashop.repository.PaymentRepository;
@@ -39,7 +38,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(box));
         primaryStage.show();
         KitchenGUI kitchenGUI = new KitchenGUI();
-        kitchenGUI.KitchenGUI();
+        kitchenGUI.initKitchenGUI();
         kitchenGUI.getController().addObservables(ctrl.getObserablesList());
         ctrl.setKitchenGUI(kitchenGUI);
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {

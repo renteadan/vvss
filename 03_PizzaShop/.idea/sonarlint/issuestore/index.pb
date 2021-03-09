@@ -33,3 +33,21 @@ i
 .src/main/java/pizzashop/model/OrderStatus.java,9\e\9e4227d6e357003c347c9797b819d3944b2eb31b
 X
 (src/main/java/pizzashop/model/Order.java,3\5\3576af2638a0365b93de1019fa5c2daae3616717
+T
+$src/main/resources/data/payments.txt,c\0\c0b53a09efc26842d57680470ce5bfe2fce0b233
+U
+%src/main/resources/fxml/mainFXML.fxml,f\7\f7787231a06a6145ce9bc001ccb7f132931f81cd
+Z
+*src/main/resources/fxml/OrdersGUIFXML.fxml,4\8\48dffcdac12bf9fd7f5452db4164e730d7893485
+[
++src/main/resources/fxml/kitchenGUIFXML.fxml,4\8\4838528e86fea59fcc2ea0662397332134db7f89
+O
+src/main/resources/payments.txt,1\8\18155f271619a6b8805f00fb6d8091046b78883c
+a
+1src/main/java/pizzashop/Observers/Observable.java,7\7\77464b5c711ab5144880259547c8f19d74c8a93e
+K
+src/main/resources/menu.txt,7\1\71eb44a1bfadf32e4f9d5f0a33c0d6776f07578a
+_
+/src/main/java/pizzashop/Observers/Observer.java,1\9\19f32d04ac52f46756448e081a4dfc777a1f1b33
+P
+ src/main/resources/data/menu.txt,1\6\169cbb2685aaaf47ce057954043f14d1f67c6ee5

@@ -1,9 +1,8 @@
 
 J
-java:S3655""5Call "result.isPresent()" before accessing the value.(¼ı¦7
-g
-java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ÍÎ§˜şÿÿÿÿ
+java:S3655,"5Call "result.isPresent()" before accessing the value.(¼ı¦7
+O
+java:S1128"-Remove this unused import 'javafx.fxml.FXML'.(ÃÚ¢„şÿÿÿÿ8­üí²/
+V	java:S125-"<This block of commented-out lines of code should be removed.(Š‘Ÿûÿÿÿÿ
 C
-java:S1604"(Make this anonymous inner class a lambda(ùë²¥şÿÿÿÿ
-h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÎ§˜şÿÿÿÿ
-V	java:S125#"<This block of commented-out lines of code should be removed.(Š‘Ÿûÿÿÿÿ
+java:S1604'"(Make this anonymous inner class a lambda(ùë²¥şÿÿÿÿ

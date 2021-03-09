@@ -1,9 +1,14 @@
 
-S	java:S106."9Replace this use of System.out or System.err by a logger.(£İÕ˜ùÿÿÿÿ
-V	java:S125,"<This block of commented-out lines of code should be removed.(Š‘Ÿûÿÿÿÿ
-J
-java:S3655+"5Call "result.isPresent()" before accessing the value.(¼ı¦7
 Q	java:S125"<This block of commented-out lines of code should be removed.(‹İôà
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(£İÕ˜ùÿÿÿÿ
 >
-java:S1604&"(Make this anonymous inner class a lambda(®Şñç
-M	java:S106-"9Replace this use of System.out or System.err by a logger.(„†K
+java:S1604,"(Make this anonymous inner class a lambda(®Şñç
+V	java:S1252"<This block of commented-out lines of code should be removed.(Š‘Ÿûÿÿÿÿ
+M	java:S1063"9Replace this use of System.out or System.err by a logger.(„†K
+W
+java:S36551"5Call "result.isPresent()" before accessing the value.(ôüøüøÿÿÿÿ8‰üí²/
+V
+java:S1128"4Remove this unused import 'pizzashop.gui.OrdersGUI'.(¿ëÇÈøÿÿÿÿ8‰üí²/
+K
+java:S11251")Remove the literal "false" boolean value.(ôüøüøÿÿÿÿ8‰üí²/
+W	java:S125C"<This block of commented-out lines of code should be removed.(¨ŸÀ8‰üí²/

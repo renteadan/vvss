@@ -1,22 +1,41 @@
 
-J
-java:S3740"/Provide the parametrized type for this generic.(έΘ«πÿÿÿÿÿ
+N	java:S106S"9Replace this use of System.out or System.err by a logger.(ϊ•€Λ
 F
-java:S1444"+Make this "public static order" field final(¤ώ³θώÿÿÿÿ
+java:S1444$"+Make this "public static order" field final(¤ώ³θώÿÿÿÿ
 >
-java:S1604"(Make this anonymous inner class a lambda(„­³
-N	java:S106E"9Replace this use of System.out or System.err by a logger.(ΏΟµτ
-l
-java:S1104"QMake order a static final constant or non-public and provide accessors if needed.(¤ώ³θώÿÿÿÿ
-C
-java:S1604 "(Make this anonymous inner class a lambda(τβϋύÿÿÿÿ
+java:S1604*"(Make this anonymous inner class a lambda(„­³
+N	java:S106U"9Replace this use of System.out or System.err by a logger.(ϊ•€Λ
+N	java:S106T"9Replace this use of System.out or System.err by a logger.(ΏΟµτ
 k
-java:S1104"UMake addOrders a static final constant or non-public and provide accessors if needed.(„­³
-N	java:S106D"9Replace this use of System.out or System.err by a logger.(ϊ•€Λ
-?
-java:S2386"Make this member "protected".(¤ώ³θώÿÿÿÿ8»λι€/
-N	java:S106F"9Replace this use of System.out or System.err by a logger.(ϊ•€Λ
-=
-java:S2189""Add an end condition to this loop.(οÿÿÿÿÿ
+java:S1104*"UMake addOrders a static final constant or non-public and provide accessors if needed.(„­³
 a
-java:S2142("FEither re-interrupt this method or rethrow the "InterruptedException".(θ®γ¶ψÿÿÿÿ
+java:S21426"FEither re-interrupt this method or rethrow the "InterruptedException".(θ®γ¶ψÿÿÿÿ
+?
+java:S2386$"Make this member "protected".(¤ώ³θώÿÿÿÿ8»λι€/
+=
+java:S2189-""Add an end condition to this loop.(οÿÿÿÿÿ
+C
+java:S1604."(Make this anonymous inner class a lambda(τβϋύÿÿÿÿ
+J
+java:S3740"/Provide the parametrized type for this generic.(έΘ«πÿÿÿÿÿ
+l
+java:S1104$"QMake order a static final constant or non-public and provide accessors if needed.(¤ώ³θώÿÿÿÿ
+[
+java:S1128"9Remove this unused import 'pizzashop.Observers.Observer'.(­΅»Έύÿÿÿÿ8„όν²/
+X
+java:S1128
+";Remove this unused import 'pizzashop.Observers.Observable'.(ηΠώ8„όν²/
+X
+java:S2696>"6Make the enclosing method "static" or remove this set.(­πϊÿÿÿÿ8„όν²/
+J
+java:S1125Y"(Remove the literal "true" boolean value.(¨λ‘†ϊÿÿÿÿ8„όν²/
+S
+java:S2696Z"6Make the enclosing method "static" or remove this set.(νµ§8„όν²/
+X
+java:S2696b"6Make the enclosing method "static" or remove this set.(³™Γωÿÿÿÿ8„όν²/
+W
+java:S2209b"5Change this instance-reference to a static reference.(³™Γωÿÿÿÿ8„όν²/
+R
+java:S2209f"5Change this instance-reference to a static reference.(Α—μ8„όν²/
+J
+java:S1125g"(Remove the literal "true" boolean value.(’Ύ›ύÿÿÿÿ8„όν²/
