@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Prj236 - rdir2600_BBT</title>
+<link type="text/css" rel="stylesheet" href="http://localhost:8080/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width= height= src="http://localhost:8080/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Prj236<br/>Test Suite: Prj236 - rdir2600_BBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 20/03/2021</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.rdir2600_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc1189">236-10: addPayment_ECP_amount_valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc1191">236-11: addPayment_ECP_amount_invalid</a></p><p style="padding-left: 45px;"><a href="#toc_tc1193">236-12: addPayment_BVA_amount_valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc1195">236-13: addPayment_BVA_amount_invalid</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>project for group 236</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : rdir2600_BBT</h1>
+<a name="toc_tc1189"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case 236-10: addPayment_ECP_amount_valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">rdir2600</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se adauga o plata cu toate datele valide</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>amount&gt;0</p>
+
+<p>0&lt;table&lt;9</p>
+
+<p>type in [card, cash]</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">Lab02:  rdir2600_F01 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc1191"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case 236-11: addPayment_ECP_amount_invalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">rdir2600</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>amount este un numar negativ</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>amount&lt;0</p>
+
+<p>0&lt;table&lt;9</p>
+
+<p>type in [card, cash]</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">Lab02:  rdir2600_F01 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc1193"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case 236-12: addPayment_BVA_amount_valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">rdir2600</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se adauga o plate cu toate valorile valide, amount este 0.1</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>amount=0.1</p>
+
+<p>0&lt;table&lt;9</p>
+
+<p>type in [card, cash]</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">Lab02:  rdir2600_F01 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc1195"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case 236-13: addPayment_BVA_amount_invalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">rdir2600</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se adauga o plata cu amount 0</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>amount=0</p>
+
+<p>0&lt;table&lt;9</p>
+
+<p>type in [card, cash]</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">Lab02:  rdir2600_F01 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>

@@ -27,8 +27,6 @@ k
 ;src/main/java/pizzashop/controller/OrdersGUIController.java,9\5\9593d6c2aae59b75f1c5ffdb8bb3a549a0c0d8d6
 a
 1src/main/java/pizzashop/service/PaymentAlert.java,9\0\902001140ed6ee8dd55076f5d2572971ee237995
-i
-9src/main/java/pizzashop/controller/MainGUIController.java,9\d\9d97f1b3b833c7bf37819367d50d1d04bbeb964b
 ^
 .src/main/java/pizzashop/model/OrderStatus.java,9\e\9e4227d6e357003c347c9797b819d3944b2eb31b
 X
