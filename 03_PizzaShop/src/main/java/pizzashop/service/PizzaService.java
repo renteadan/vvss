@@ -13,6 +13,16 @@ public class PizzaService {
     private MenuRepository menuRepo;
     private PaymentRepository payRepo;
 
+    public void validate(Payment payment) throws Exception {
+        if(payment.getAmount() <= 0d) {
+            throw new Exception("Invalid ammount !!!");
+        }
+
+        if(payment.getTableNumber() < 1 || payment.getTableNumber() > 8) {
+            throw new Exception("Invalid table");
+        }
+    }
+
     public PizzaService(MenuRepository menuRepo, PaymentRepository payRepo){
         this.menuRepo=menuRepo;
         this.payRepo=payRepo;
@@ -22,9 +32,11 @@ public class PizzaService {
 
     public List<Payment> getPayments(){return payRepo.getAll(); }
 
-    public void addPayment(int table, PaymentType type, double amount){
+    public boolean addPayment(int table, PaymentType type, double amount) throws Exception {
         Payment payment= new Payment(table, type, amount);
+        validate(payment);
         payRepo.add(payment);
+        return true;
     }
 
     public double getTotalAmount(PaymentType type){

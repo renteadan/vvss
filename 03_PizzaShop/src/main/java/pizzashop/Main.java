@@ -36,7 +36,7 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.setAlwaysOnTop(false);
         primaryStage.setScene(new Scene(box));
-        primaryStage.show();
+        //primaryStage.show();
         KitchenGUI kitchenGUI = new KitchenGUI();
         kitchenGUI.initKitchenGUI();
         kitchenGUI.getController().addObservables(ctrl.getObserablesList());

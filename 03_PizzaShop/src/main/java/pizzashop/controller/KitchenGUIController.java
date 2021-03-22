@@ -33,7 +33,7 @@ public class KitchenGUIController {
         return isOpened;
     }
 
-    public static  ObservableList<Order> order = FXCollections.observableArrayList();
+    public static ObservableList<Order> order = FXCollections.observableArrayList();
     private Order selectedOrder;
     private Calendar now = Calendar.getInstance();
     private static List<OrdersGUI> observables = new ArrayList<>();
