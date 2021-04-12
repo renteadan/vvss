@@ -53,3 +53,5 @@ i
 9src/main/java/pizzashop/controller/MeseGuiController.java,7\1\71212e4f68d9feb0042a3039f40ca93f1a8532f0
 e
 5src/test/java/pizzashop/service/PizzaServiceTest.java,f\4\f496bf34deff9b910e5c4b5fdd20fe2b239503b3
+f
+6src/test/java/pizzashop/service/PizzaServiceTest2.java,c\6\c65dabff99a0f708f589322bcead9c03c62f8179
