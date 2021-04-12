@@ -30,7 +30,13 @@ public class PizzaService {
 
     public List<MenuDataModel> getMenuData(){return menuRepo.getMenu();}
 
-    public List<Payment> getPayments(){return payRepo.getAll(); }
+    public List<Payment> getPayments(){
+        if(payRepo == null) {
+            return null;
+        }
+
+        return payRepo.getAll();
+    }
 
     public void setPayment(PaymentRepository payRepo) {
         this.payRepo = payRepo;
@@ -46,9 +52,9 @@ public class PizzaService {
     public double getTotalAmount(PaymentType type){
         double total=0.0d; //1
         List<Payment> l=getPayments(); //2
-        if(l.isEmpty())//3
+        if ((l==null)) //3
             return total; //4
-        if ((l==null)) //5
+        if(l.isEmpty())//5
             return total; //6
         for (Payment p:l){ //7
             if (p.getType().equals(type)) //8
