@@ -32,6 +32,10 @@ public class PizzaService {
 
     public List<Payment> getPayments(){return payRepo.getAll(); }
 
+    public void setPayment(PaymentRepository payRepo) {
+        this.payRepo = payRepo;
+    }
+
     public boolean addPayment(int table, PaymentType type, double amount) throws Exception {
         Payment payment= new Payment(table, type, amount);
         validate(payment);
@@ -42,13 +46,15 @@ public class PizzaService {
     public double getTotalAmount(PaymentType type){
         double total=0.0d; //1
         List<Payment> l=getPayments(); //2
-        if ((l==null) || l.isEmpty()) //3
+        if(l.isEmpty())//3
             return total; //4
-        for (Payment p:l){ //5
-            if (p.getType().equals(type)) //6
-                total+=p.getAmount(); //7
-        } //8
-        return total; //9
-    } //10
+        if ((l==null)) //5
+            return total; //6
+        for (Payment p:l){ //7
+            if (p.getType().equals(type)) //8
+                total+=p.getAmount(); //9
+        } //10
+        return total; //11
+    } //12
 
 }
