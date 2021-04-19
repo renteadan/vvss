@@ -1,5 +1,6 @@
 package pizzashop.service;
 
+import org.junit.Test;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -31,6 +32,7 @@ class PizzaServiceTest {
         assertEquals(true, result);
     }
 
+    @Test
     @RepeatedTest(2)
     void testAmmountV() throws Exception {
         //Arrange
