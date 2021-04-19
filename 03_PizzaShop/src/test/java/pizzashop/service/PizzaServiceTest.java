@@ -100,11 +100,10 @@ class PizzaServiceTest {
         assertEquals(true, result);
     }
 
-    @ParameterizedTest
-    @ValueSource(doubles = {1, Double.MAX_VALUE})
-    @Test()
-    void testAmmountBVAV(double value) throws Exception {
+    @Test
+    void testAmmountBVAV() throws Exception {
         //Arrange
+        double value = 1.5d;
         int t = 3;
         PaymentType paymentType = PaymentType.Card;
         PizzaService pizzaService = new PizzaService(new MenuRepository(), new PaymentRepository());
