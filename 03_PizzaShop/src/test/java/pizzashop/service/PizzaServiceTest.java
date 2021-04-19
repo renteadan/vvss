@@ -33,7 +33,6 @@ class PizzaServiceTest {
     }
 
     @Test
-    @RepeatedTest(2)
     void testAmmountV() throws Exception {
         //Arrange
         int t = 3;
@@ -74,7 +73,7 @@ class PizzaServiceTest {
         assertThrows(Exception.class, () -> {pizzaService.addPayment(value, paymentType, amount);});
     }
 
-    @RepeatedTest(2)
+    @Test
     void testAmmountN() throws Exception {
         //Arrange
         int t = 3;
@@ -103,6 +102,7 @@ class PizzaServiceTest {
 
     @ParameterizedTest
     @ValueSource(doubles = {1, Double.MAX_VALUE})
+    @Test
     void testAmmountBVAV(double value) throws Exception {
         //Arrange
         int t = 3;
@@ -132,6 +132,7 @@ class PizzaServiceTest {
     @DisplayName("Test amount BVA invalid")
     @ParameterizedTest
     @ValueSource(doubles = {-1d})
+    @Test
     void testAmountBVAN(double value) throws Exception {
         //Arrange
         PaymentType paymentType = PaymentType.Card;

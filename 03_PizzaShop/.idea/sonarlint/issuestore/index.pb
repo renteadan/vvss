@@ -55,3 +55,17 @@ e
 5src/test/java/pizzashop/service/PizzaServiceTest.java,f\4\f496bf34deff9b910e5c4b5fdd20fe2b239503b3
 f
 6src/test/java/pizzashop/service/PizzaServiceTest2.java,c\6\c65dabff99a0f708f589322bcead9c03c62f8179
+d
+4src/test/java/pizzashop/model/MenuDataModelTest.java,c\e\ce8701609a807fda7cfa34cbe8ed928cf7513f5b
+^
+.src/test/java/pizzashop/model/PaymentTest.java,7\3\73f7beff106128700102a991e358c1363181fbee
+f
+6src/test/java/pizzashop/service/PizzaServiceTest3.java,2\9\29aba560dd2fad41e72cebb9cf8ca87dee16ec4c
+g
+7src/test/java/pizzashop/service/PizzaServiceTestI1.java,7\1\7197e8ab93fd09243d0e1d281087cb6524494dcf
+g
+7src/test/java/pizzashop/service/PizzaServiceTestI2.java,2\b\2b801158bc5a9fdc3836351e0a33697afc8a3bb4
+g
+7src/test/java/pizzashop/service/PizzaServiceTestI3.java,f\0\f05c3103c09f57f91904429418fecc1e67eb691f
+g
+7src/test/java/pizzashop/service/PizzaServiceTestI4.java,b\4\b47c4d833562d0039ce48bb1b324a3471bbbb2ea
