@@ -1,8 +1,9 @@
-package pizzashop.repository;
+package pizzashop.unitTesting;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import pizzashop.model.MenuDataModel;
+import pizzashop.repository.MenuRepository;
 
 import java.util.Arrays;
 
@@ -16,11 +17,11 @@ class MenuRepositoryTest {
     public void testGet() {
         menuRepository = mock(MenuRepository.class);
 
-        Mockito.when(menuRepository.getMenuItem("Margherita")).thenReturn(new MenuDataModel("Margherita", 0, 8.00d));
+        Mockito.when(menuRepository.getMenuItem("Margherita,8.00")).thenReturn(new MenuDataModel("Margherita", 0, 8.00d));
 
-        menuRepository.getMenuItem("Margherita");
+        menuRepository.getMenuItem("Margherita,8.00");
 
-        Mockito.verify(menuRepository).getMenuItem("Margherita");
+        Mockito.verify(menuRepository).getMenuItem("Margherita,8.00");
     }
 
     @Test

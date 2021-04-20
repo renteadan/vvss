@@ -1,4 +1,4 @@
-package pizzashop.repository;
+package pizzashop.unitTesting;
 
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
@@ -6,6 +6,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import pizzashop.model.Payment;
 import pizzashop.model.PaymentType;
+import pizzashop.repository.PaymentRepository;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package pizzashop.service;
+package pizzashop.Integrare;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -7,13 +7,12 @@ import pizzashop.model.Payment;
 import pizzashop.model.PaymentType;
 import pizzashop.repository.MenuRepository;
 import pizzashop.repository.PaymentRepository;
-
-import java.awt.*;
+import pizzashop.service.PizzaService;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
-class PizzaServiceTestI1 {
+class PizzaServiceTestI3 {
 
     @Test
     void testService() throws Exception {
@@ -40,40 +39,26 @@ class PizzaServiceTestI1 {
 
     @Test
     public void testPaymentRepository() {
-        PaymentRepository paymentRepository = mock(PaymentRepository.class);
+        PaymentRepository paymentRepository = new PaymentRepository();
 
         Payment payment1 = new Payment(1, PaymentType.Card, 20d);
         Payment payment2 = new Payment(2, PaymentType.Card, 40d);
         Payment payment3 = new Payment(3, PaymentType.Card, 30d);
 
-        Mockito.doNothing().when(paymentRepository).add(payment1);
-        Mockito.doNothing().when(paymentRepository).add(payment2);
-        Mockito.doNothing().when(paymentRepository).add(payment3);
-
         paymentRepository.add(payment1);
         paymentRepository.add(payment2);
         paymentRepository.add(payment3);
 
-        Mockito.verify(paymentRepository).add(payment1);
-        Mockito.verify(paymentRepository).add(payment2);
-        Mockito.verify(paymentRepository).add(payment3);
+        assertEquals(3, paymentRepository.getAll().size());
     }
 
     @Test
-    void testPayment() {
-        Payment payment = mock(Payment.class);
+    public void testPayment() {
+        Payment payment = new Payment(1, PaymentType.Cash, 10d);
 
-        Mockito.doNothing().when(payment).setTableNumber(1);
-        Mockito.doNothing().when(payment).setType(PaymentType.Cash);
-        Mockito.doNothing().when(payment).setAmount(20d);
-
-        payment.setTableNumber(1);
-        payment.setType(PaymentType.Cash);
-        payment.setAmount(20d);
-
-        Mockito.verify(payment).setTableNumber(1);
-        Mockito.verify(payment).setType(PaymentType.Cash);
-        Mockito.verify(payment).setAmount(20d);
+        assertEquals(1, payment.getTableNumber());
+        assertEquals(PaymentType.Cash, payment.getType());
+        assertEquals(10d, payment.getAmount());
     }
 
     @Test

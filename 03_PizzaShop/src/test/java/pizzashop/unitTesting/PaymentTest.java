@@ -1,6 +1,8 @@
-package pizzashop.model;
+package pizzashop.unitTesting;
 
 import org.junit.jupiter.api.Test;
+import pizzashop.model.Payment;
+import pizzashop.model.PaymentType;
 
 import static org.junit.jupiter.api.Assertions.*;
 

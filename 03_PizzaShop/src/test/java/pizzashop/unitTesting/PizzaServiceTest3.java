@@ -1,9 +1,10 @@
-package pizzashop.service;
+package pizzashop.unitTesting;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import pizzashop.model.Payment;
 import pizzashop.model.PaymentType;
+import pizzashop.service.PizzaService;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;

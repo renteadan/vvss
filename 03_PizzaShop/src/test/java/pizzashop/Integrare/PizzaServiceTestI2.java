@@ -1,4 +1,4 @@
-package pizzashop.service;
+package pizzashop.Integrare;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -7,11 +7,12 @@ import pizzashop.model.Payment;
 import pizzashop.model.PaymentType;
 import pizzashop.repository.MenuRepository;
 import pizzashop.repository.PaymentRepository;
+import pizzashop.service.PizzaService;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
-class PizzaServiceTestI4 {
+class PizzaServiceTestI2 {
 
     @Test
     void testService() throws Exception {
@@ -52,20 +53,36 @@ class PizzaServiceTestI4 {
     }
 
     @Test
-    public void testPayment() {
-        Payment payment = new Payment(1, PaymentType.Cash, 10d);
+    void testPayment() {
+        Payment payment = mock(Payment.class);
 
-        assertEquals(1, payment.getTableNumber());
-        assertEquals(PaymentType.Cash, payment.getType());
-        assertEquals(10d, payment.getAmount());
+        Mockito.doNothing().when(payment).setTableNumber(1);
+        Mockito.doNothing().when(payment).setType(PaymentType.Cash);
+        Mockito.doNothing().when(payment).setAmount(20d);
+
+        payment.setTableNumber(1);
+        payment.setType(PaymentType.Cash);
+        payment.setAmount(20d);
+
+        Mockito.verify(payment).setTableNumber(1);
+        Mockito.verify(payment).setType(PaymentType.Cash);
+        Mockito.verify(payment).setAmount(20d);
     }
 
     @Test
     void testMenuItem() {
-        MenuDataModel menuDataModel = new MenuDataModel("1", 1, 2d);
+        MenuDataModel menuDataModel = mock(MenuDataModel.class);
 
-        assertEquals("1", menuDataModel.getMenuItem());
-        assertEquals(1, menuDataModel.getQuantity());
-        assertEquals(2d, menuDataModel.getPrice());
+        Mockito.doNothing().when(menuDataModel).setMenuItem("a");
+        Mockito.doNothing().when(menuDataModel).setPrice(20d);
+        Mockito.doNothing().when(menuDataModel).setQuantity(0);
+
+        menuDataModel.setMenuItem("a");
+        menuDataModel.setPrice(20d);
+        menuDataModel.setQuantity(0);
+
+        Mockito.verify(menuDataModel).setMenuItem("a");
+        Mockito.verify(menuDataModel).setPrice(20d);
+        Mockito.verify(menuDataModel).setQuantity(0);
     }
 }
