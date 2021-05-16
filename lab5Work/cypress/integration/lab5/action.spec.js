@@ -9,5 +9,8 @@ context('Actions', () => {
     cy.get('#s')
       .type('something').should('have.value', 'something').type('{enter}');
     cy.url().should('eq', 'https://www.cs.ubbcluj.ro/?s=something');
+
+    cy.get('.post-wrap')
+      .should('have.length', 7);
   })
 });

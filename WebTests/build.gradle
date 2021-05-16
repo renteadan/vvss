@@ -22,6 +22,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    implementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
     compile 'net.serenity-bdd:serenity-core:2.0.81'
     compile 'net.serenity-bdd:serenity-junit:2.0.81'
     testCompile('junit:junit:4.12')

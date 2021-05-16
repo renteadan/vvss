@@ -10,13 +10,26 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityParameterizedRunner.class)
-@UseTestDataFrom("src/test/resources/loginData.csv")
+@UseTestDataFrom(value="src/test/resources/loginData.csv")
 public class LoginTest {
 
     @Managed
     private WebDriver webdriver;
     @Steps
     private LoginSteps loginSteps;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     private String username, password;
 
     @Test
@@ -24,4 +37,7 @@ public class LoginTest {
         loginSteps.login(username, password);
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }

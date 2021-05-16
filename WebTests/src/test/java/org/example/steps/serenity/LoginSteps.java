@@ -7,17 +7,14 @@ import org.example.pages.LoginPage;
 public class LoginSteps {
     LoginPage loginPage;
 
-    @Step
     public void clickLoginButton() {
         loginPage.clickLoginButton();
     }
 
-    @Step
     public void inputPassword(String password) {
         loginPage.inputPassword(password);
     }
 
-    @Step
     public void inputUser(String username) {
         loginPage.open();
         loginPage.typeUser(username);
@@ -27,7 +24,6 @@ public class LoginSteps {
     public void login(String username, String password) {
         inputUser(username);
         inputPassword(password);
-
         clickLoginButton();
     }
 }
