@@ -17,14 +17,11 @@ public class LoginTest {
     private WebDriver webdriver;
     @Steps
     private LoginSteps loginSteps;
-//    @Steps
-//    private HeaderSteps headerSteps;
     private String username, password;
 
     @Test
     public void loginTestSuccessful() {
         loginSteps.login(username, password);
-        //headerSteps.checkYouAreLoggedIn();
     }
 
 }
