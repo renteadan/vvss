@@ -27,6 +27,7 @@ public class LoginSteps {
     public void login(String username, String password) {
         inputUser(username);
         inputPassword(password);
+        
         clickLoginButton();
     }
 }
